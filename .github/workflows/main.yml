@@ -1,5 +1,3 @@
-name: Percy Visual Testing
-
 on:
   push:
     branches:
@@ -15,6 +13,7 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - run: npm run test
+      - run: npm run start:server
+      - run: npm run percy:cypress
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}

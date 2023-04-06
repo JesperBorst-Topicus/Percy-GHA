@@ -14,7 +14,6 @@ jobs:
         with:
           node-version: '14'
       - run: npm install
-      - run: npm run "start:server"
-      - run: npm run "percy:cypress"
+      - run: npm run test
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
